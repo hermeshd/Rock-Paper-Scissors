@@ -13,6 +13,9 @@ function computerPlay(arr) {
 
 //Function to define which one wins
 function playGame(playerMove, pcMove) {
+
+    console.log("Human plays: " + playerMove);
+
     switch (playerMove) {
         case "rock":
             if (pcMove === "rock") {
@@ -50,10 +53,21 @@ function playGame(playerMove, pcMove) {
     }
 }
 
-var input = prompt("Please make your move: ");
 
-if (input.toLowerCase() !== "rock" && input.toLowerCase() !== "paper" && input.toLowerCase() !== "scissors" ) {
-    alert("Invalid play");
+
+
+
+function bestOutOfThree() {
+    for (let i = 0; i < 5; i++) {
+        
+        var input = prompt("Please make your move: ");
+
+        if (input.toLowerCase() !== "rock" && input.toLowerCase() !== "paper" && input.toLowerCase() !== "scissors") {
+            alert("Invalid play");
+        }
+
+        playGame(input.toLowerCase(), computerPlay(options));
+    }
 }
 
-playGame(input.toLowerCase(), computerPlay(options));
+bestOutOfThree();
