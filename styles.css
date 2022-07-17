@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Dosis:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background-color: gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .welcome {
     display: flex;
     justify-content: center;
@@ -5,38 +14,47 @@
     flex-direction: column;
     margin: 5%;
     text-align: center;
+    font-family: 'Dosis', sans-serif;
+    flex-shrink: 1;
+}
+
+h1 {
+    font-size: 80px;
+    margin: 10px;
+}
+
+h2 {
+    font-weight: 400;
+    margin: 10px;
 }
 
 .play-buttons {
     display: flex;
-    justify-content: space-around;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    gap: 10px;
+    justify-content: center;
+    max-width: 500px;
+    gap: 30px;
     width: 100%;
-    height: 30%;
+    height: 150px;
 }
 
 button {
     display: flex;
     flex-grow: 1;
-    margin: 5%;
     justify-content: center;
     align-items: center;
-    background-repeat: no-repeat;
     background-size: 100% 100%;
+    background-position: center;
+    background-color: gray;
 }
 
 .rock {
     background-image: url(./images/rock.png);
-}
+ }
 
 .paper {
     background-image: url(./images/paper.png);
-}
+ }
 
 .scissors {
-    background-image: url(./images/scissors.png);
+    background-image: url(./images/scissors.png); 
 }
