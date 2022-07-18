@@ -38,48 +38,68 @@ function playGame(playerMove, pcMove) {
         case "rock":
             if (pcMove === "rock") {
                 console.log("It's a draw :D");
+                console.log(HumanWins);
+                console.log(PCWins);
                 break;
             } else if (pcMove === "scissors") {
                 console.log("You win! Rock beats Scissors!");
                 HumanWins = HumanWins + 1;
+                console.log(HumanWins);
+                console.log(PCWins);
                 break;
             } else if (pcMove === "paper") {
                 console.log("You lose! Paper beats Rock!");
                 PCWins = PCWins + 1;
+                console.log(HumanWins);
+                console.log(PCWins);
                 break;
             }
         case "paper":
             if (pcMove === "rock") {
                 console.log("You win! Paper beats Rock!");
                 HumanWins = HumanWins + 1;
+                console.log(HumanWins);
+                console.log(PCWins);
                 break;
             } else if (pcMove === "scissors") {
                 console.log("You lose! Scissors beat Paper");
                 PCWins = PCWins + 1;
+                console.log(HumanWins);
+                console.log(PCWins);
                 break;
             } else if (pcMove === "paper") {
                 console.log("It's a draw :D");
+                console.log(HumanWins);
+                console.log(PCWins);
                 break;
             }
         case "scissors":
             if (pcMove === "rock") {
                 console.log("You lose! Rock beats Scissors");
                 PCWins = PCWins + 1;
+                console.log(HumanWins);
+                console.log(PCWins);
                 break;
             } else if (pcMove === "scissors") {
                 console.log("It's a draw :D");
+                console.log(HumanWins);
+                console.log(PCWins);
                 break;
             } else if (pcMove === "paper") {
                 console.log("You win! Scissors beat Paper");
                 HumanWins = HumanWins + 1;
+                console.log(HumanWins);
+                console.log(PCWins);
                 break;
             }
     }
+
+    //Determine who's the overall winner
+    if (HumanWins === 5) {
+        alert("Human is the winner");
+    } else if (PCWins === 5) {
+        alert("PC Wins");
+    }
 }
 
-//Determine who's the overall winner
-if (HumanWins === 5) {
-    alert("Human is the winner");
-} else if (PCWins === 5) {
-    alert("PC Wins");
-}
+
