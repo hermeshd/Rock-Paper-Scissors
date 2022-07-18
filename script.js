@@ -15,8 +15,22 @@ function computerPlay(arr) {
     return move;
 }
 
-//Function to define which one wins
+//Event Listener to store Human move
+const playButtonRock = document.querySelector(".rock");
+const playButtonPaper = document.querySelector(".paper");
+const playButtonScissors = document.querySelector(".scissors");
+
+playButtonRock.addEventListener("click", () => playGame("rock", computerPlay(options)));
+playButtonPaper.addEventListener("click", () => {
+    playGame("paper", computerPlay(options));
+});
+playButtonScissors.addEventListener("click", () => {
+    playGame("scissors", computerPlay(options));
+});
+
+//Function to define which one wins each individual match
 function playGame(playerMove, pcMove) {
+
 
     console.log("Human plays: " + playerMove);
 
@@ -63,34 +77,9 @@ function playGame(playerMove, pcMove) {
     }
 }
 
-//Loop to play the game up to five times
-function bestOutOfThree() {
-    for (let i = 0; i < 5; i++) {
-        
-        var input = prompt("Please make your move: ");
-
-        if (input.toLowerCase() !== "rock" && input.toLowerCase() !== "paper" && input.toLowerCase() !== "scissors") {
-            alert("Invalid play");
-        }
-
-        playGame(input.toLowerCase(), computerPlay(options));
-
-        if (HumanWins === 3) {
-            console.log("The Human is the winner");
-            console.log(HumanWins);
-            console.log(PCWins);
-            break;
-        }
-        
-        if (PCWins === 3) {
-            console.log("The PC is the winner")
-            console.log(HumanWins);
-            console.log(PCWins);
-            break;
-        }
-
-        
-    }
+//Determine who's the overall winner
+if (HumanWins === 5) {
+    alert("Human is the winner");
+} else if (PCWins === 5) {
+    alert("PC Wins");
 }
-
-bestOutOfThree();

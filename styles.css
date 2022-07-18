@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Dosis:wght@200;300;400;500;600;700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
 body {
     background-color: gray;
@@ -57,4 +58,43 @@ button {
 
 .scissors {
     background-image: url(./images/scissors.png); 
+}
+
+.results {
+    margin-top: 40px;
+}
+
+table {
+    background-color: gray;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+th {
+    border: 2px solid white;
+    border-top: 0px;
+}
+
+.human {
+    border-left: 0px;
+    padding-right: 10px;
+}
+
+.PC {
+    border-right: 0px;
+    padding-left: 10px;
+}
+
+.human-score {
+    border-left: 0px;
+    border-bottom: 0px;
+    text-decoration-line: line-through;
+    text-decoration-thickness: 0.15em;
+    
+}
+
+.PC-score {
+    border-right: 0px;
+    border-bottom: 0px;
 }
